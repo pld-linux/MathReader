@@ -48,15 +48,19 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/%{name}/SystemFiles/FrontEnd/Binaries/Linux
-%attr(755,root,root) %{_libdir}/%{name}/Executables
 %attr(755,root,root) %{_bindir}/%{name}
-%{_libdir}/%{name}/SystemFiles/SpellingDictionaries
-%{_libdir}/%{name}/SystemFiles/Installation
-%{_libdir}/%{name}/SystemFiles/FrontEnd/TextResources
-%{_libdir}/%{name}/SystemFiles/FrontEnd/SystemResources
-%{_libdir}/%{name}/SystemFiles/FrontEnd/StyleSheets
-%{_libdir}/%{name}/SystemFiles/Fonts
-%{_libdir}/%{name}/SystemFiles/CharacterEncodings
-%{_libdir}/%{name}/Documentation
+%dir %{_libdir}/%{name}
+%attr(755,root,root) %{_libdir}/%{name}/Executables
 %{_libdir}/%{name}/Configuration
+%{_libdir}/%{name}/Documentation
+%dir %{_libdir}/%{name}/SystemFiles
+%{_libdir}/%{name}/SystemFiles/CharacterEncodings
+%dir %{_libdir}/%{name}/SystemFiles/FrontEnd
+%dir %{_libdir}/%{name}/SystemFiles/FrontEnd/Binaries
+%attr(755,root,root) %{_libdir}/%{name}/SystemFiles/FrontEnd/Binaries/Linux
+%{_libdir}/%{name}/SystemFiles/FrontEnd/StyleSheets
+%{_libdir}/%{name}/SystemFiles/FrontEnd/SystemResources
+%{_libdir}/%{name}/SystemFiles/FrontEnd/TextResources
+%{_libdir}/%{name}/SystemFiles/Fonts
+%{_libdir}/%{name}/SystemFiles/Installation
+%{_libdir}/%{name}/SystemFiles/SpellingDictionaries
