@@ -22,6 +22,15 @@ animate graphics, play sounds, and copy information from notebooks to
 other documents. MathReader can be used by most web browsers as a
 helper application for viewing notebook documents.
 
+%description -l pl
+MathReader jest przegl±dark± dla dokumentów utworzonych w programie
+Mathematica, jedynym w ¶wiecie w pe³ni zintegrowanym systemie
+technicznych obliczeñ. MathReader pozwala wy¶wietlaæ i drukowaæ
+notatki, odtwarzaæ animacje, odgrywaæ d¼wiêki i kopiowaæ informacje z
+notatek programu Mathematica do innych dokumentów. MathReader mo¿e byæ
+te¿ u¿ywany przez wiêkszo¶æ przegl±darek WWW jako aplikacja pomocnicza
+do przegl±dania dokumentów.
+
 %prep
 
 %install
