@@ -32,6 +32,7 @@ Source4:	%{name}_%{_version}_Linux-IA64.sh
 # Source4-size:	12019319
 # based on http://www.wolfram.com/products/mathreader/licenseagreement.html
 Source5:	%{name}-license.txt
+Source6:	%{name}.desktop
 Group:		Applications/Math
 URL:		http://www.wolfram.com/products/mathreader/
 ExclusiveArch:	%{ix86} ppc alpha amd64 ia64
@@ -79,9 +80,10 @@ sh %{_source} auto \
 %else
 TODO
 %endif
-install -d $RPM_BUILD_ROOT%{_bindir}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_desktopdir}}
 ln -sf %{_libdir}/%{name}/Executables/{MathReader,mathreader} $RPM_BUILD_ROOT%{_bindir}
 install %{SOURCE5} .
+install %{SOURCE6} $RPM_BUILD_ROOT%{_desktopdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
