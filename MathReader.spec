@@ -1,41 +1,28 @@
-# TODO:
-# - version for PPC/alpha/IA64/AMD64
-# - talk with wolfram about redistribute it ;)
-#
-%define		_version	5.0.1
-%define		ppc_version	4.2.1
 Summary:	Mathematica Notebook Reader
 Summary(pl):	Przegl±darka plików z programu Mathematica
 Name:		MathReader
-%ifnarch ppc
-Version:	%{_version}
-%else
-Version:	%{ppc_version}
-%endif
-Release:	1.1
+Version:	5.0.1
+Release:	2
 License:	almost free, distributable
 # from http://www.wolfram.com/products/mathreader/download.cgi
-Source0:	%{name}_%{_version}_Linux.sh
+Source0:	%{name}_%{version}_Linux.sh
 # Source0-md5:	35b7144eff51e017a03bf5c68d743548
 # Source0-size:	9356911
-Source1:	%{name}_%{_version}_Linux-AMD64.sh
+Source1:	%{name}_%{version}_Linux-AMD64.sh
 # Source1-md5:	54c0db30f9a78269c03c970aaa841b66
 # Source1-size:	10186360
-Source2:	%{name}_%{_version}_Linux-AXP.sh
+Source2:	%{name}_%{version}_Linux-AXP.sh
 # Source2-md5:	9ab612c9543c69838dd38445dd0e8b05
 # Source2-size:	10534517
-Source3:	%{name}-%{ppc_version}-Linux-PPC.tar.gz
-# Source3-md5:	9743cf3c81d3f83661034ae2cf5b6e78
-# Source3-size:	9269016
-Source4:	%{name}_%{_version}_Linux-IA64.sh
-# Source4-md5:	6ea3a14eac68391da213a25d62c629d4
-# Source4-size:	12019319
+Source3:	%{name}_%{version}_Linux-IA64.sh
+# Source3-md5:	6ea3a14eac68391da213a25d62c629d4
+# Source3-size:	12019319
 # based on http://www.wolfram.com/products/mathreader/licenseagreement.html
-Source5:	%{name}-license.txt
-Source6:	%{name}.desktop
+Source4:	%{name}-license.txt
+Source5:	%{name}.desktop
 Group:		Applications/Math
 URL:		http://www.wolfram.com/products/mathreader/
-ExclusiveArch:	%{ix86} ppc alpha amd64 ia64
+ExclusiveArch:	%{ix86} alpha amd64 ia64
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -70,20 +57,16 @@ rm -rf $RPM_BUILD_ROOT
 %define	_source	%{SOURCE2}
 %endif
 #%%ifarch ia64
-#%%define	_source	%{SOURCE4}
+#%%define	_source	%{SOURCE3}
 #%%endif
 
-%ifnarch ppc
 sh %{_source} auto \
 	-targetdir=$RPM_BUILD_ROOT%{_libdir}/%{name} \
 	-execdir=$RPM_BUILD_ROOT%{_bindir}
-%else
-TODO
-%endif
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_desktopdir}}
 ln -sf %{_libdir}/%{name}/Executables/{MathReader,mathreader} $RPM_BUILD_ROOT%{_bindir}
-install %{SOURCE5} .
-install %{SOURCE6} $RPM_BUILD_ROOT%{_desktopdir}
+install %{SOURCE4} .
+install %{SOURCE5} $RPM_BUILD_ROOT%{_desktopdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
