@@ -106,6 +106,9 @@ rm -rf $RPM_BUILD_ROOT
 %ifarch amd64
 %attr(755,root,root) %{_libdir}/%{name}/SystemFiles/FrontEnd/Binaries/Linux-x86-64
 %endif
+%ifarch alpha
+%attr(755,root,root) %{_libdir}/%{name}/SystemFiles/FrontEnd/Binaries/Linux-AXP
+%endif
 %{_libdir}/%{name}/SystemFiles/FrontEnd/StyleSheets
 %{_libdir}/%{name}/SystemFiles/FrontEnd/SystemResources
 %{_libdir}/%{name}/SystemFiles/FrontEnd/TextResources
