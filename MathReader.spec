@@ -98,7 +98,12 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/%{name}/SystemFiles/CharacterEncodings
 %dir %{_libdir}/%{name}/SystemFiles/FrontEnd
 %dir %{_libdir}/%{name}/SystemFiles/FrontEnd/Binaries
+%ifarch %{ix86}
 %attr(755,root,root) %{_libdir}/%{name}/SystemFiles/FrontEnd/Binaries/Linux
+%endif
+%ifarch amd64
+%attr(755,root,root) %{_libdir}/%{name}/SystemFiles/FrontEnd/Binaries/Linux-x86-64
+%endif
 %{_libdir}/%{name}/SystemFiles/FrontEnd/StyleSheets
 %{_libdir}/%{name}/SystemFiles/FrontEnd/SystemResources
 %{_libdir}/%{name}/SystemFiles/FrontEnd/TextResources
