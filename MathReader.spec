@@ -17,14 +17,19 @@ License:	almost free, distributable
 # from http://www.wolfram.com/products/mathreader/download.cgi
 Source0:	%{name}_%{_version}_Linux.sh
 # Source0-md5:	35b7144eff51e017a03bf5c68d743548
+# Source0-size:	9356911
 Source1:	%{name}_%{_version}_Linux-AMD64.sh
 # Source1-md5:	54c0db30f9a78269c03c970aaa841b66
+# Source1-size:	10186360
 Source2:	%{name}_%{_version}_Linux-AXP.sh
 # Source2-md5:	9ab612c9543c69838dd38445dd0e8b05
+# Source2-size:	10534517
 Source3:	%{name}-%{ppc_version}-Linux-PPC.tar.gz
 # Source3-md5:	9743cf3c81d3f83661034ae2cf5b6e78
+# Source3-size:	9269016
 Source4:	%{name}_%{_version}_Linux-IA64.sh
 # Source4-md5:	6ea3a14eac68391da213a25d62c629d4
+# Source4-size:	12019319
 # based on http://www.wolfram.com/products/mathreader/licenseagreement.html
 Source5:	%{name}-license.txt
 Group:		Applications/Math
@@ -75,7 +80,7 @@ sh %{_source} auto \
 TODO
 %endif
 install -d $RPM_BUILD_ROOT%{_bindir}
-ln -sf %{_libdir}/%{name}/Executables/* $RPM_BUILD_ROOT%{_bindir}
+ln -sf %{_libdir}/%{name}/Executables/{MathReader,mathreader} $RPM_BUILD_ROOT%{_bindir}
 install %{SOURCE5} .
 
 %clean
