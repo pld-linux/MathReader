@@ -7,11 +7,11 @@
 Summary:	Mathematica Notebook Reader
 Summary(pl):	Przegl±darka plików z programu Mathematica
 Name:		MathReader
-#ifnarch ppc
+%ifnarch ppc
 Version:	%{_version}
-#else
+%else
 Version:	%{ppc_version}
-#endif
+%endif
 Release:	1.1
 License:	almost free, distributable
 # from http://www.wolfram.com/products/mathreader/download.cgi
