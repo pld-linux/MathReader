@@ -7,16 +7,12 @@ License:	almost free, distributable
 # from http://www.wolfram.com/products/mathreader/download.cgi
 Source0:	%{name}_%{version}_Linux.sh
 # Source0-md5:	35b7144eff51e017a03bf5c68d743548
-# Source0-size:	9356911
 Source1:	%{name}_%{version}_Linux-AMD64.sh
 # Source1-md5:	54c0db30f9a78269c03c970aaa841b66
-# Source1-size:	10186360
 Source2:	%{name}_%{version}_Linux-AXP.sh
 # Source2-md5:	9ab612c9543c69838dd38445dd0e8b05
-# Source2-size:	10534517
 Source3:	%{name}_%{version}_Linux-IA64.sh
 # Source3-md5:	6ea3a14eac68391da213a25d62c629d4
-# Source3-size:	12019319
 # based on http://www.wolfram.com/products/mathreader/licenseagreement.html
 Source4:	%{name}-license.txt
 Source5:	%{name}.desktop
