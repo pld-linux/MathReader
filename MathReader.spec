@@ -112,3 +112,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/%{name}/SystemFiles/Fonts
 %{_libdir}/%{name}/SystemFiles/Installation
 %{_libdir}/%{name}/SystemFiles/SpellingDictionaries
+%{_desktopdir}/%{name}.desktop
