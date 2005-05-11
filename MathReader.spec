@@ -4,6 +4,7 @@ Name:		MathReader
 Version:	5.0.1
 Release:	2
 License:	almost free, distributable
+Group:		Applications/Math
 # from http://www.wolfram.com/products/mathreader/download.cgi
 Source0:	%{name}_%{version}_Linux.sh
 # Source0-md5:	35b7144eff51e017a03bf5c68d743548
@@ -16,9 +17,9 @@ Source3:	%{name}_%{version}_Linux-IA64.sh
 # based on http://www.wolfram.com/products/mathreader/licenseagreement.html
 Source4:	%{name}-license.txt
 Source5:	%{name}.desktop
-Group:		Applications/Math
 URL:		http://www.wolfram.com/products/mathreader/
-ExclusiveArch:	%{ix86} alpha amd64 ia64
+BuildRequires:	rpmbuild(macros) >= 1.213
+ExclusiveArch:	%{ix86} alpha %{x8664} ia64
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -46,7 +47,7 @@ rm -rf $RPM_BUILD_ROOT
 %ifarch %{ix86}
 %define _source	%{SOURCE0}
 %endif
-%ifarch amd64
+%ifarch %{x8664}
 %define	_source	%{SOURCE1}
 %endif
 %ifarch alpha
@@ -82,7 +83,7 @@ rm -rf $RPM_BUILD_ROOT
 %ifarch %{ix86}
 %attr(755,root,root) %{_libdir}/%{name}/SystemFiles/FrontEnd/Binaries/Linux
 %endif
-%ifarch amd64
+%ifarch %{x8664}
 %attr(755,root,root) %{_libdir}/%{name}/SystemFiles/FrontEnd/Binaries/Linux-x86-64
 %endif
 %ifarch alpha
