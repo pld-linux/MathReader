@@ -1,5 +1,5 @@
 Summary:	Mathematica Notebook Reader
-Summary(pl):	Przegl±darka plików z programu Mathematica
+Summary(pl.UTF-8):   PrzeglÄ…darka plikÃ³w z programu Mathematica
 Name:		MathReader
 Version:	5.0.1
 Release:	3
@@ -30,14 +30,14 @@ animate graphics, play sounds, and copy information from notebooks to
 other documents. MathReader can be used by most web browsers as a
 helper application for viewing notebook documents.
 
-%description -l pl
-MathReader jest przegl±dark± dla dokumentów utworzonych w programie
-Mathematica, jedynym w ¶wiecie w pe³ni zintegrowanym systemie
-technicznych obliczeñ. MathReader pozwala wy¶wietlaæ i drukowaæ
-notatki, odtwarzaæ animacje, odgrywaæ d¼wiêki i kopiowaæ informacje z
-notatek programu Mathematica do innych dokumentów. MathReader mo¿e byæ
-te¿ u¿ywany przez wiêkszo¶æ przegl±darek WWW jako aplikacja pomocnicza
-do przegl±dania dokumentów.
+%description -l pl.UTF-8
+MathReader jest przeglÄ…darkÄ… dla dokumentÃ³w utworzonych w programie
+Mathematica, jedynym w Å›wiecie w peÅ‚ni zintegrowanym systemie
+technicznych obliczeÅ„. MathReader pozwala wyÅ›wietlaÄ‡ i drukowaÄ‡
+notatki, odtwarzaÄ‡ animacje, odgrywaÄ‡ dÅºwiÄ™ki i kopiowaÄ‡ informacje z
+notatek programu Mathematica do innych dokumentÃ³w. MathReader moÅ¼e byÄ‡
+teÅ¼ uÅ¼ywany przez wiÄ™kszoÅ›Ä‡ przeglÄ…darek WWW jako aplikacja pomocnicza
+do przeglÄ…dania dokumentÃ³w.
 
 %prep
 
