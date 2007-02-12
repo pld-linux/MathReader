@@ -1,5 +1,5 @@
 Summary:	Mathematica Notebook Reader
-Summary(pl.UTF-8):   Przeglądarka plików z programu Mathematica
+Summary(pl.UTF-8):	Przeglądarka plików z programu Mathematica
 Name:		MathReader
 Version:	5.0.1
 Release:	3
